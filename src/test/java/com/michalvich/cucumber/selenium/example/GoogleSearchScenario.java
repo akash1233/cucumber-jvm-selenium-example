@@ -16,10 +16,11 @@ public class GoogleSearchScenario {
 
 	@Given("^the page is open \"([^\"]*)\"$")
 	public void the_page_is_open(String page) throws Throwable {
-		DesiredCapabilities capability = DesiredCapabilities.internetExplorer();
-		capability.setJavascriptEnabled(true);
-		capability.setPlatform(Platform.VISTA);
-		driver = new RemoteWebDriver(new URL("http://100.72.242.8:4444/wd/hub"), capability);
+		DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+		caps.setCapability("platform", "Windows 10");
+		caps.setCapability("version", "11.0");
+		caps.setJavascriptEnabled(true);
+		driver = new RemoteWebDriver(new URL("http://D_Singh:44c07910-d4a8-4430-8ec6-e31012792bab@ondemand.saucelabs.com:80/wd/hub"), caps);
 		driver.get(page);
 	}
 
@@ -32,6 +33,7 @@ public class GoogleSearchScenario {
 
 	@Then("^a browser title should contains \"([^\"]*)\"$")
 	public void a_browser_title_should_contains(String text) throws Throwable {
+        System.out.println("----------------Title contains " + driver.getTitle()+ "----------------------");
 		assertTrue(driver.getTitle().contains(text));
 		driver.close();
 		driver.quit();

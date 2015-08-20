@@ -19,7 +19,7 @@ public class GoogleSearchScenario {
 		DesiredCapabilities capability = DesiredCapabilities.internetExplorer();
 		capability.setJavascriptEnabled(true);
 		capability.setPlatform(Platform.VISTA);
-		driver = new RemoteWebDriver(new URL("http://100.72.202.13:4444/wd/hub"), capability);
+		driver = new RemoteWebDriver(new URL("http://100.72.242.8:4444/wd/hub"), capability);
 		driver.get(page);
 	}
 

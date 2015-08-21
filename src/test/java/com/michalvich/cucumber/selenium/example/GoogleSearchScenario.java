@@ -16,13 +16,14 @@ import static org.junit.Assert.assertTrue;
 
 public class GoogleSearchScenario {
     private RemoteWebDriver driver;
-
+    private static  DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
     @Given("^the page is open \"([^\"]*)\"$")
     public void the_page_is_open(String page) throws Throwable {
-        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setBrowserName(System.getenv("SELENIUM_BROWSER"));
         desiredCapabilities.setVersion(System.getenv("SELENIUM_VERSION"));
         desiredCapabilities.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
+        desiredCapabilities.setCapability("name" , "TestCase1");
+        desiredCapabilities.setCapability("passed" , true);
         driver = new RemoteWebDriver(
                 new URL("http://D_Singh:44c07910-d4a8-4430-8ec6-e31012792bab@ondemand.saucelabs.com:80/wd/hub"),
                 desiredCapabilities);

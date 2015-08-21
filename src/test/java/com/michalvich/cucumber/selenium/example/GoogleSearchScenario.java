@@ -39,9 +39,13 @@ public class GoogleSearchScenario {
     @Then("^a browser title should contains \"([^\"]*)\"$")
     public void a_browser_title_should_contains(String text) throws Throwable {
         System.out.println("----------------Title contains " + driver.getTitle() + "----------------------");
+        printSessionId();
         assertTrue(driver.getTitle().contains(text));
         driver.close();
         driver.quit();
     }
-
+    private void printSessionId() {
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s", (((RemoteWebDriver) driver).getSessionId()).toString(), "some job name");
+        System.out.println(message);
+    }
 }

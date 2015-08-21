@@ -45,7 +45,7 @@ public class GoogleSearchScenario {
         driver.quit();
     }
     private void printSessionId() {
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s", (((RemoteWebDriver) driver).getSessionId()).toString(), "TestCase status=pass");
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s status=%3$s", (((RemoteWebDriver) driver).getSessionId()).toString(), "TestCase1" , "pass");
         System.out.println(message);
     }
 }

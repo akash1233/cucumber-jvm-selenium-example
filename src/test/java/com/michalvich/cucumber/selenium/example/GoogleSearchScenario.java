@@ -22,7 +22,7 @@ public class GoogleSearchScenario {
         desiredCapabilities.setBrowserName(System.getenv("SELENIUM_BROWSER"));
         desiredCapabilities.setVersion(System.getenv("SELENIUM_VERSION"));
         desiredCapabilities.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
-        desiredCapabilities.setCapability("name" , "TestCase_1");
+        desiredCapabilities.setCapability("name" , "Test Case_1");
         desiredCapabilities.setCapability("passed" , true);
         driver = new RemoteWebDriver(
                 new URL("http://D_Singh:44c07910-d4a8-4430-8ec6-e31012792bab@ondemand.saucelabs.com:80/wd/hub"),

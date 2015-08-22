@@ -22,7 +22,7 @@ public class GoogleSearchScenario {
         desiredCapabilities.setBrowserName(System.getenv("SELENIUM_BROWSER"));
         desiredCapabilities.setVersion(System.getenv("SELENIUM_VERSION"));
         desiredCapabilities.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
-        desiredCapabilities.setCapability("name" , "TestCase1");
+        desiredCapabilities.setCapability("name" , "TestCase_1");
         desiredCapabilities.setCapability("passed" , true);
         driver = new RemoteWebDriver(
                 new URL("http://D_Singh:44c07910-d4a8-4430-8ec6-e31012792bab@ondemand.saucelabs.com:80/wd/hub"),
@@ -46,7 +46,7 @@ public class GoogleSearchScenario {
         driver.quit();
     }
     private void printSessionId() {
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s status=%3$s", (((RemoteWebDriver) driver).getSessionId()).toString(), "TestCase1" , "pass");
+        String message = String.format("SauceOnDemandSessionID=%1$s", (((RemoteWebDriver) driver).getSessionId()).toString());
         System.out.println(message);
     }
 }

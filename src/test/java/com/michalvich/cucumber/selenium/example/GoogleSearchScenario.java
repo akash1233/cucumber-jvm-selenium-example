@@ -25,7 +25,7 @@ public class GoogleSearchScenario {
         desiredCapabilities.setCapability("name" , "TestCase_1");
         desiredCapabilities.setCapability("passed" , true);
         driver = new RemoteWebDriver(
-                new URL("http://D_Singh:44c07910-d4a8-4430-8ec6-e31012792bab@ondemand.saucelabs.com:80/wd/hub"),
+                new URL("http://SC_Jenkins_TestUser:ca833291-167b-431e-a119-06017334bb3d@c9100ac6f4ba2d0.amer.homedepot.com:4446/wd/hub"),
                 desiredCapabilities);
         driver.get(page);
     }
@@ -39,7 +39,7 @@ public class GoogleSearchScenario {
 
     @Then("^a browser title should contains \"([^\"]*)\"$")
     public void a_browser_title_should_contains(String text) throws Throwable {
-        System.out.println("----------------Title contains " + driver.getTitle() + "----------------------");
+        System.out.println("----------------Title contain's " + driver.getTitle() + "----------------------");
         printSessionId();
         assertTrue(driver.getTitle().contains(text));
         driver.close();

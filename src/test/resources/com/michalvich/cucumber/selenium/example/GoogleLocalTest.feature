@@ -6,4 +6,4 @@ Feature: Search on Google
   Scenario: results are shown
     Given the page is open "http://www.google.com"
     When I search for "Cucumber"
-    Then a browser title should contains "Cucumber - Google Search"
+    Then a browser title should contains "Google"

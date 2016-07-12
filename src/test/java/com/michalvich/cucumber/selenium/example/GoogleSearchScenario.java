@@ -19,13 +19,13 @@ public class GoogleSearchScenario {
     private static  DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
     @Given("^the page is open \"([^\"]*)\"$")
     public void the_page_is_open(String page) throws Throwable {
-        desiredCapabilities.setBrowserName(System.getenv("SELENIUM_BROWSER"));
-        desiredCapabilities.setVersion(System.getenv("SELENIUM_VERSION"));
-        desiredCapabilities.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
+        desiredCapabilities.setBrowserName("chrome");
+        desiredCapabilities.setVersion("45");
+        desiredCapabilities.setCapability("platform", "Windows 8");
         desiredCapabilities.setCapability("name" , "TestCase_1");
         desiredCapabilities.setCapability("passed" , true);
         driver = new RemoteWebDriver(
-                new URL("http://SC_Jenkins_TestUser:ca833291-167b-431e-a119-06017334bb3d@c9100ac6f4ba2d0.amer.homedepot.com:4446/wd/hub"),
+                new URL("http://dharmendrasingh:e21c7bfb-7b48-4334-961f-cebc4078a457@ondemand.saucelabs.com:80/wd/hub"),
                 desiredCapabilities);
         driver.get(page);
     }

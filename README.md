@@ -1,3 +1,6 @@
+
+[![Build Status](https://drone.io/github.com/akash1233/cucumber-jvm-selenium-example/status.png)](https://drone.io/github.com/akash1233/cucumber-jvm-selenium-example/latest)
+
 cucumber-jvm-selenium-example
 ================
 
@@ -17,3 +20,4 @@ Feature: Search on Google
     When I search for "Cucumber"
     Then a browser title should contains "Cucumber"
 </pre>
+These tests also work with saucleabs cloud .

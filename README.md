@@ -1,8 +1,9 @@
 Drone.io Build status
+
 [![Build Status](https://drone.io/github.com/akash1233/cucumber-jvm-selenium-example/status.png)](https://drone.io/github.com/akash1233/cucumber-jvm-selenium-example/latest)
 
 Saucelabs build status 
-https://saucelabs.com/u/dharmendrasingh
+
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/dharmendrasingh.svg)](https://saucelabs.com/u/dharmendrasingh)
 
 cucumber-jvm-selenium-example

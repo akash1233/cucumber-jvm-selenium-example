@@ -4,7 +4,7 @@ Drone.io Build status
 
 Saucelabs build status 
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/dharmendrasingh.svg)](https://saucelabs.com/u/dharmendrasingh)
+[![Sauce Test Status](https://saucelabs.com/buildstatus/dharmendrasingh)](https://saucelabs.com/u/dharmendrasingh)
 
 cucumber-jvm-selenium-example
 ================

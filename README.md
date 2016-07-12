@@ -6,6 +6,10 @@ Saucelabs build status
 
 [![Sauce Test Status](https://saucelabs.com/buildstatus/dharmendrasingh)](https://saucelabs.com/u/dharmendrasingh)
 
+Circle CI Build Status 
+
+[![CircleCI](https://circleci.com/gh/akash1233/cucumber-jvm-selenium-example.svg?style=svg)](https://circleci.com/gh/akash1233/cucumber-jvm-selenium-example)
+
 cucumber-jvm-selenium-example
 ================
 

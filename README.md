@@ -10,6 +10,8 @@ Circle CI Build Status
 
 [![CircleCI](https://circleci.com/gh/akash1233/cucumber-jvm-selenium-example.svg?style=svg)](https://circleci.com/gh/akash1233/cucumber-jvm-selenium-example)
 
+[![Coverage Status](https://coveralls.io/repos/github/akash1233/cucumber-jvm-selenium-example/badge.svg?branch=master)](https://coveralls.io/github/akash1233/cucumber-jvm-selenium-example?branch=master)
+
 cucumber-jvm-selenium-example
 ================
 

@@ -25,7 +25,7 @@ public class GoogleSearchScenario {
         desiredCapabilities.setCapability("name" , "TestCase_1");
         desiredCapabilities.setCapability("passed" , true);
         driver = new RemoteWebDriver(
-                new URL("http://dharmendrasingh:e21c7bfb-7b48-4334-961f-cebc4078a457@ondemand.saucelabs.com:80/wd/hub"),
+                new URL("http://SCTestUser:529d7a14-c241-43d0-9578-5bb80bb1f997@ln2a42.homedepot.com:4446/wd/hub"),
                 desiredCapabilities);
         driver.get(page);
     }

@@ -73,6 +73,46 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../store-retreive-github/Jenkinsfile.gdsl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../store-retreive-github/ci-cd/cf-deploy.sh">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../store-retreive-github/src/test/java/org/cts/service/StoreRetreiveApplicationTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../store-retreive-github/src/test/java/org/cts/service/homedepot/SwaggerConfigTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../store-retreive-github/src/test/java/org/homedepot/StoreRetreiveApplicationTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../store-retreive-github/src/test/java/org/homedepot/SwaggerConfigTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../store-retreive-github/src/test/java/org/homedepot/integrationtests/RestAssuredIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../store-retreive-github/src/test/java/org/homedepot/service/StoreRetreiveServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>

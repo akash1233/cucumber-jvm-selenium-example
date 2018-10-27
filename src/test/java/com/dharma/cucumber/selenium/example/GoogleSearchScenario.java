@@ -24,21 +24,21 @@ public class GoogleSearchScenario {
     @Given("^the page is open \"([^\"]*)\"$")
     public void the_page_is_open(String page) throws Throwable {
         //Zalenium
-        desiredCapabilities.setBrowserName("chrome");
-        desiredCapabilities.setCapability("platform", "LINUX");
+//        desiredCapabilities.setBrowserName("chrome");
+//        desiredCapabilities.setCapability("platform", "LINUX");
         ///SL
-//        desiredCapabilities.setBrowserName("iexplore");
-//        desiredCapabilities.setCapability("platform", "Windows 10");
+        desiredCapabilities.setBrowserName("iexplore");
+        desiredCapabilities.setCapability("platform", "Windows 10");
 //
 
         desiredCapabilities.setCapability("name", "TestCase_" + java.util.Calendar.getInstance().getTime().toString());
         desiredCapabilities.setCapability("passed", true);
-//        driver = new RemoteWebDriver(
-//                new URL("https://dharmendrasingh:e21c7bfb-7b48-4334-961f-cebc4078a457@ondemand.saucelabs.com:443/wd/hub"),
-//                desiredCapabilities);
         driver = new RemoteWebDriver(
-                new URL("http://localhost:4444/wd/hub"),
+                new URL("https://dharmendrasingh:e21c7bfb-7b48-4334-961f-cebc4078a457@ondemand.saucelabs.com:443/wd/hub"),
                 desiredCapabilities);
+//        driver = new RemoteWebDriver(
+//                new URL("http://localhost:4444/wd/hub"),
+//                desiredCapabilities);
         driver.get(page);
     }
 

@@ -6,4 +6,4 @@ Feature: Upload a file
   Scenario: results are shown
     Given the page is open "https://cgi-lib.berkeley.edu/ex/fup.html"
     When I upload the file
-    Then i should be able to add a note
+    Then i should be able to add a note and take screeshots and store locally

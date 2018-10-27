@@ -5,41 +5,40 @@ import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import cucumber.runtime.PendingException;
 import gherkin.formatter.model.Scenario;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.io.File;
 import java.net.URL;
 
 import static org.junit.Assert.assertTrue;
 
 public class GoogleSearchScenario {
     private RemoteWebDriver driver;
-    private static  DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-    @Given("^the page is open \"([^\"]*)\"$")
-    public void the_page_is_open(String page ) throws Throwable {
-        //Zalenium
-//        desiredCapabilities.setBrowserName("chrome");
-//        desiredCapabilities.setCapability("platform", "LINUX");
+    private static DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
+    @Given("^the page is open \"([^\"]*)\"$")
+    public void the_page_is_open(String page) throws Throwable {
+        //Zalenium
+        desiredCapabilities.setBrowserName("chrome");
+        desiredCapabilities.setCapability("platform", "LINUX");
         ///SL
-        desiredCapabilities.setBrowserName("iexplore");
-        desiredCapabilities.setCapability("platform", "Windows 10");
+//        desiredCapabilities.setBrowserName("iexplore");
+//        desiredCapabilities.setCapability("platform", "Windows 10");
 //
 
-
-        desiredCapabilities.setCapability("name" , "TestCase_" + java.util.Calendar.getInstance().getTime().toString());
-        desiredCapabilities.setCapability("passed" , true);
-        driver = new RemoteWebDriver(
-                new URL("https://dharmendrasingh:e21c7bfb-7b48-4334-961f-cebc4078a457@ondemand.saucelabs.com:443/wd/hub"),
-                desiredCapabilities);
+        desiredCapabilities.setCapability("name", "TestCase_" + java.util.Calendar.getInstance().getTime().toString());
+        desiredCapabilities.setCapability("passed", true);
 //        driver = new RemoteWebDriver(
-//                new URL("http://localhost:4444/wd/hub"),
+//                new URL("https://dharmendrasingh:e21c7bfb-7b48-4334-961f-cebc4078a457@ondemand.saucelabs.com:443/wd/hub"),
 //                desiredCapabilities);
+        driver = new RemoteWebDriver(
+                new URL("http://localhost:4444/wd/hub"),
+                desiredCapabilities);
         driver.get(page);
     }
 
@@ -59,6 +58,7 @@ public class GoogleSearchScenario {
         driver.close();
         driver.quit();
     }
+
     private void printSessionId() {
         String message = String.format("SauceOnDemandSessionID=%1$s", (((RemoteWebDriver) driver).getSessionId()).toString());
         System.out.println(message);
@@ -90,6 +90,15 @@ public class GoogleSearchScenario {
         throw new PendingException();
     }
 
+    @Then("^i should be able to add a note and take screeshots and store locally$")
+    public void iShouldBeAbleToAddANoteAndTakeScreeshotsAndStoreLocally() throws Throwable {
+        driver.findElement(By.name("note")).sendKeys("Test");
+        driver.findElement(By.cssSelector("[type='submit']")).click();
+        File srcFile = ((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File("./test003.png"));
+    }
+
 
 //    private String getFeatureFilename(Scenario scenario) {
 //        String featureName = "Feature ";
@@ -98,7 +107,6 @@ public class GoogleSearchScenario {
 //
 //        return featureName;
 //    }
-
 
 
 }

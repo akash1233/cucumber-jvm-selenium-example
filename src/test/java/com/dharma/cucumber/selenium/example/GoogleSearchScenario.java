@@ -74,7 +74,7 @@ public class GoogleSearchScenario {
     public void iUploadTheFile() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         driver.setFileDetector(new LocalFileDetector());
-        driver.findElement(By.name("upfile")).sendKeys("/Users/dharma/IdeaProjects/cucumber-jvm-selenium-example/README.md");
+        driver.findElement(By.name("upfile")).sendKeys(System.getProperty("user.dir")+ "/README.md");
     }
 
     @Then("^i should be able to add a note$")
